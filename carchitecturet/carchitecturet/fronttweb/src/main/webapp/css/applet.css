@@ -1,0 +1,220 @@
+.img {
+    background-image: url("../images/applet_img.png");
+}
+
+
+/*小程序开发*/
+
+.title {
+    padding-top: 150px;
+    position: relative;
+    height: 200px;
+}
+
+.title h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 58px;
+    color: #2C86ED;
+}
+
+.title > span {
+    width: 220px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    background-color: #FFB92D;
+}
+
+.advantage-list {
+    margin-bottom: 150px;
+}
+
+.advantage-list li {
+    float: left;
+    width: 330px;
+    height: 350px;
+}
+
+.advantage-list li:nth-of-type(1) {
+    margin-right: 135px;
+}
+
+.advantage-list li:nth-of-type(2) {
+    margin-right: 115px;
+}
+
+.advantage-list li:nth-of-type(3) {
+    width: 340px;
+}
+
+.advantage-list li .img {
+    width: 330px;
+    height: 285px;
+    background-image: url("../images/applet_share.gif");
+}
+
+.advantage-list li:nth-of-type(2) .img {
+    background-image: url("../images/applet_richscan.gif");
+}
+
+.advantage-list li:nth-of-type(3) .img {
+    width: 340px;
+    background-image: url("../images/applet_experience.gif");
+}
+
+.advantage-list li h3 {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/*使用场景*/
+
+.usagescenario {
+    height: 787px;
+    width: 100%;
+    background-image: url("../images/applet_bg.gif");
+}
+
+.usagescenario .usagescenario-title {
+    padding-top: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+.usagescenario-title h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.usagescenario-title p {
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+.usagescenario-list {
+    height: 340px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.usagescenario-list >li {
+    float: left;
+    width: 220px;
+    height: 150px;
+    border: 1px solid #bfbfbf;
+    margin-right: 105px;
+    margin-bottom: 20px;
+}
+
+.usagescenario-list >li:nth-of-type(4) {
+    margin-right: 0;
+}
+
+.usagescenario-list >li:nth-of-type(8) {
+    margin-right: 0;
+}
+
+.usagescenario-list >li .icon {
+    margin-top: 40px;
+    width: 85px;
+    height: 62px;
+    padding: 0 70px;
+    background-image: url("../images/applet_life.gif");
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+}
+
+.usagescenario-list >li:nth-of-type(2) .icon {
+    background-image: url("../images/applet_o2o.gif");
+}
+
+.usagescenario-list >li:nth-of-type(3) .icon {
+    background-image: url("../images/applet_travel.gif");
+}
+
+.usagescenario-list >li:nth-of-type(4) .icon {
+    background-image: url("../images/applet_chat.gif");
+}
+
+.usagescenario-list >li:nth-of-type(5) .icon {
+    background-image: url("../images/applet_administrativetool.gif");
+}
+
+.usagescenario-list >li:nth-of-type(6) .icon {
+    background-image: url("../images/applet_desktoptools.gif");
+}
+
+.usagescenario-list >li:nth-of-type(7) .icon {
+    background-image: url("../images/applet_train.gif");
+}
+
+.usagescenario-list >li:nth-of-type(8) .icon {
+    background-image: url("../images/applet_more.gif");
+}
+
+.usagescenario-list >li h3 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/*定制开发*/
+
+.custom-list li {
+    float: left;
+    width: 190px;
+    height: 220px;
+    margin-right: 150px;
+    margin-bottom: 150px;
+}
+
+.custom-list li:nth-of-type(4) {
+    margin-right: 0;
+}
+
+.custom-list li .icon {
+    padding: 0 45px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/applet_custom_local.gif");
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+}
+
+.custom-list li:nth-of-type(2) .icon {
+    background-image: url("../images/applet_custom_brand.gif");
+}
+
+.custom-list li:nth-of-type(3) .icon {
+    background-image: url("../images/applet_custom_function.gif");
+}
+
+.custom-list li:nth-of-type(4) .icon {
+    background-image: url("../images/applet_custom_more.gif");
+}
+
+.custom-list .text {
+    margin-top: 30px;
+    text-indent: 2em;
+    font-size: 16px;
+    color: #8b8b8b;
+}

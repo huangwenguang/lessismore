@@ -1,0 +1,179 @@
+    .img {
+        background-image: url("../images/contact-us_img.png");
+    }
+    /*地址*/
+    
+    .title {
+        padding-top: 150px;
+        position: relative;
+        height: 200px;
+    }
+    
+    .title h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 58px;
+        color: #2C86ED;
+    }
+    
+    .title > span {
+        width: 220px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        margin: auto;
+        background-color: #FFB92D;
+    }
+    
+    .about-us {}
+    
+    .about-us p {
+        color: #000;
+        font-size: 26px;
+        text-indent: 2em;
+    }
+    
+    .site-info {
+        margin-bottom: 150px;
+    }
+    
+    .site-info >li {
+        float: left;
+        width: 33.33333%
+    }
+    
+    .site-info >li>p {}
+    
+    .site-info >li>p>span {
+        float: left;
+        line-height: 30px;
+        height: 30px;
+    }
+    
+    .site-info >li>p>span.active {
+        color: #2c86ed;
+    }
+    
+    .site-info >li>p>span:nth-of-type(1) {
+        display: inline-block;
+        width: 80px;
+    }
+    
+    .site-info >li>p>span:nth-of-type(2) {
+        width: 220px;
+    }
+    
+    .site-info >li:nth-of-type(3)>p {}
+    
+    .site-info >li:nth-of-type(3) p span:nth-of-type(1) {
+        margin-left: 110px;
+        width: 50px;
+    }
+    /*百度地图*/
+    
+    .site-bg {
+        height: 405px;
+        margin-bottom: 150px;
+    }
+    /*留言*/
+    
+    .leaveword {
+        background-color: #fff;
+    }
+    
+    .leaveword-title {
+        padding-top: 100px;
+        position: relative;
+        height: 200px;
+        position: relative;
+    }
+    
+    .leaveword-title h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 58px;
+        color: #2C86ED;
+    }
+    
+    .leaveword-title > span {
+        width: 220px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        margin: auto;
+        background-color: #FFB92D;
+    }
+    
+    .leaveword .container {
+        width: 770px;
+        position: relative;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+    
+    .leaveword form input[type="text"] {
+        padding-left: 20px;
+        width: 300px;
+        height: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #3c3c3c;
+        border: 1px solid #a0a0a0;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    
+    .leaveword form textarea {
+        background-color: #fff;
+        resize: none;
+        width: 100%;
+        height: 100px;
+        max-width: 100%;
+        max-height: 100px;
+        padding-left: 20px;
+        padding-top: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #3c3c3c;
+        border: 1px solid #a0a0a0;
+        margin-bottom: 20px;
+    }
+    
+    .leaveword form input[type="button"] {
+        position: relative;
+        display: block;
+        width: 300px;
+        height: 60px;
+        background-color: #ffba2e;
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 auto;
+    }
+    /*placeholder 颜色和兼容*/
+    
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: #000;
+    }
+    
+    input:-moz-placeholder,
+    textarea:-moz-placeholder {
+        color: #000;
+    }
+    
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+        color: #000;
+    }
+    
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+        color: #000;
+    }

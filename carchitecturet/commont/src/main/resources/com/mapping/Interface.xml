@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.InterfaceDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.Interface">
+		INSERT INTO TB_INTERFACE (
+			ID, CONTENT, INTER_NAME, PRO_NAME, REMARK, REQUE_DATA, RETURN_DATA, STATUS, TYPE, URL
+		) VALUES (
+			#{id}, #{content}, #{interName}, #{proName}, #{remark}, #{requeData}, #{returnData}, #{status}, #{type}, #{url}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.Interface">
+		DELETE FROM TB_INTERFACE <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.Interface">
+		UPDATE TB_INTERFACE <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.Interface" resultType="_long">
+		SELECT COUNT(1) FROM TB_INTERFACE <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.Interface" resultMap="InterfaceResultMap">
+		SELECT * FROM TB_INTERFACE <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="InterfaceResultMap" type="com.lessismore.commont.model.Interface">
+		<id property="id" column="ID" />
+		<result property="content" column="CONTENT" />
+		<result property="interName" column="INTER_NAME" />
+		<result property="proName" column="PRO_NAME" />
+		<result property="remark" column="REMARK" />
+		<result property="requeData" column="REQUE_DATA" />
+		<result property="returnData" column="RETURN_DATA" />
+		<result property="status" column="STATUS" />
+		<result property="type" column="TYPE" />
+		<result property="url" column="URL" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.content != null">CONTENT = #{entity.content},</if>
+			<if test="entity.interName != null">INTER_NAME = #{entity.interName},</if>
+			<if test="entity.proName != null">PRO_NAME = #{entity.proName},</if>
+			<if test="entity.remark != null">REMARK = #{entity.remark},</if>
+			<if test="entity.requeData != null">REQUE_DATA = #{entity.requeData},</if>
+			<if test="entity.returnData != null">RETURN_DATA = #{entity.returnData},</if>
+			<if test="entity.status != null">STATUS = #{entity.status},</if>
+			<if test="entity.type != null">TYPE = #{entity.type},</if>
+			<if test="entity.url != null">URL = #{entity.url},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

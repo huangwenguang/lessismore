@@ -1,0 +1,80 @@
+.top-img {
+    height: 2.96rem;
+    width: 100%;
+}
+
+.top-img > img {
+    height: 100%;
+    width: 100%;
+}
+
+.contactway {
+    text-align: center;
+}
+
+.notescontact {
+    height: 1.813333rem;
+    line-height: 1.813333rem;
+    text-align: center;
+    font-size: 0.64rem;
+    color: #ff0000;
+}
+
+.tel {
+    height: 2.666667rem;
+}
+
+.tel >p {
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    font-size: 0.426667rem;
+}
+
+.tel >p:nth-of-type(2) {
+    font-size: 0.48rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.tel >p:nth-of-type(2) span {
+    width: 0.746667rem;
+    height: 0.746667rem;
+    background-image: url("./../images/contactus_2.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 1.386667rem;
+    top: 0.32rem;
+}
+
+.hint {
+    color: #ff6a0a;
+    margin-top: 0.566667rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hint > p {
+    font-size: 0.426667rem;
+    line-height: 1.12rem;
+}
+
+.hint > p:nth-of-type(1) {
+    width: 2.133333rem;
+    height: 2.32rem;
+    text-align: right;
+}
+
+.hint > p:nth-of-type(2) {
+    width: 4.0rem;
+    height: 2.32rem;
+    line-height: 1.12rem;
+    text-align: left;
+}
+
+.advisory {
+    margin-top: 0.566667rem;
+    font-size: 0.693333rem;
+    font-weight: 700;
+    color: #ff6a0a;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.PushDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.Push">
+		INSERT INTO TB_PUSH (
+			ID, CREATE_DATE, INTER_NAME, PRO_NAME, RECEIVER, SENDER, STATUS, TYPE
+		) VALUES (
+			#{id}, #{createDate}, #{interName}, #{proName}, #{receiver}, #{sender}, #{status}, #{type}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.Push">
+		DELETE FROM TB_PUSH <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.Push">
+		UPDATE TB_PUSH <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.Push" resultType="_long">
+		SELECT COUNT(1) FROM TB_PUSH <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.Push" resultMap="PushResultMap">
+		SELECT * FROM TB_PUSH <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="PushResultMap" type="com.lessismore.commont.model.Push">
+		<id property="id" column="ID" />
+		<result property="createDate" column="CREATE_DATE" />
+		<result property="interName" column="INTER_NAME" />
+		<result property="proName" column="PRO_NAME" />
+		<result property="receiver" column="RECEIVER" />
+		<result property="sender" column="SENDER" />
+		<result property="status" column="STATUS" />
+		<result property="type" column="TYPE" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.createDate != null">CREATE_DATE = #{entity.createDate},</if>
+			<if test="entity.interName != null">INTER_NAME = #{entity.interName},</if>
+			<if test="entity.proName != null">PRO_NAME = #{entity.proName},</if>
+			<if test="entity.receiver != null">RECEIVER = #{entity.receiver},</if>
+			<if test="entity.sender != null">SENDER = #{entity.sender},</if>
+			<if test="entity.status != null">STATUS = #{entity.status},</if>
+			<if test="entity.type != null">TYPE = #{entity.type},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

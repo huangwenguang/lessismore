@@ -1,0 +1,155 @@
+   .img {
+       background-image: url("../images/store_img.png");
+   }
+   
+   .store-dev {
+       padding-bottom: 100px;
+   }
+   
+   .store-dev .title {
+        padding-top: 150px; 
+       position: relative;
+       height: 200px;
+   }
+   
+   .store-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .store-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .store-introduce {
+       height: 400px;
+       line-height: 400px;
+       vertical-align: middle;
+       margin-bottom: 100px;
+       /* background: #eee; */
+       /* position: relative; */
+   }
+   
+   .store-introduce .introduce-text {
+       display: inline-block;
+       padding-top: 100px;
+       width: 800px;
+       font-size: 14px;
+       color: #666666;
+   }
+   
+   .store-introduce .introduce-img {
+       margin-top: 61px;
+       width: 393px;
+       height: 278px;
+       background-image: url("../images/store_ng.gif");
+   }
+   
+   .introduce-text >p {
+       line-height: 30px;
+       text-indent: 2em;
+   }
+   /*九大优势*/
+   
+   .coreadvantage {
+       position: relative;
+   }
+   
+   .coreadvantage-list {}
+   
+   .coreadvantage-list >li {
+       width: 320px;
+       height: 100px;
+   }
+   
+   .coreadvantage-list >li:nth-of-type(1) {
+       margin: 0 auto;
+   }
+   
+   .coreadvantage-list li >p {
+       width: 178px;
+       /*float: left;*/
+       font-size: 20px;
+       color: #2c86ed;
+   }
+   
+   .coreadvantage-list li >p:nth-of-type(2) {
+       /*float: right;*/
+       width: 122px;
+   }
+   
+   .coreadvantage-list .list-ls li {
+       position: relative;
+       float: left;
+       width: 50%;
+       text-indent: 1em;
+       font-size: 12px;
+       color: #555555;
+       height: 35px;
+       line-height: 35px;
+   }
+   
+   .coreadvantage .odd >li {
+       margin-bottom: 80px;
+   }
+   
+   .coreadvantage .even >li {
+       margin-bottom: 80px;
+   }
+   
+   .coreadvantage .list-ls li > i {
+       position: absolute;
+       left: 0;
+       top: 15px;
+       width: 4px;
+       height: 4px;
+       border-radius: 50%;
+       background-color: #2c86ed;
+   }
+   
+   .coreadvantage li {
+       width: 320px;
+       height: 100px;
+   }
+   
+   .coreadvantage li >p {
+       width: 178px;
+       float: left;
+       font-size: 20px;
+       color: #2c86ed;
+   }
+   
+   .coreadvantage li >p:nth-of-type(2) {
+       float: right;
+       width: 122px;
+   }
+   
+   .coreadvantage .list-ls li {
+       position: relative;
+       float: left;
+       /*width: 50%;*/
+       text-indent: 1em;
+       font-size: 12px;
+       color: #555555;
+       height: 35px;
+       line-height: 35px;
+   }
+   
+   .coreadvantage .store-ng {
+       position: absolute;
+       left: 380px;
+       top: 135px;
+       width: 500px;
+       height: 500px;
+       background-image: url("../images/store_championship.gif");
+   }

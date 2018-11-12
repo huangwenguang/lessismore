@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.ParamTypeDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.ParamType">
+		INSERT INTO TB_PARAM_TYPE (
+			ID, CREATE_DATE, NAME, UPDATE_DATE
+		) VALUES (
+			#{id}, #{createDate}, #{name}, #{updateDate}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.ParamType">
+		DELETE FROM TB_PARAM_TYPE <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.ParamType">
+		UPDATE TB_PARAM_TYPE <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.ParamType" resultType="_long">
+		SELECT COUNT(1) FROM TB_PARAM_TYPE <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.ParamType" resultMap="ParamTypeResultMap">
+		SELECT * FROM TB_PARAM_TYPE <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="ParamTypeResultMap" type="com.lessismore.commont.model.ParamType">
+		<id property="id" column="ID" />
+		<result property="createDate" column="CREATE_DATE" />
+		<result property="name" column="NAME" />
+		<result property="updateDate" column="UPDATE_DATE" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.createDate != null">CREATE_DATE = #{entity.createDate},</if>
+			<if test="entity.name != null">NAME = #{entity.name},</if>
+			<if test="entity.updateDate != null">UPDATE_DATE = #{entity.updateDate},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

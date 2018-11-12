@@ -1,0 +1,219 @@
+   .img {
+       background-image: url("../images/iot_img.png");
+   }
+   
+   .iot-dev {}
+   
+   .iot-dev .title {
+       padding-top: 150px;
+       position: relative;
+       height: 200px;
+   }
+   
+   .iot-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .iot-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .iot-introduce {
+       position: relative;
+   }
+   
+   .iot-introduce .introduce-text {
+       float: right;
+       width: 800px;
+       font-size: 14px;
+       color: #666666;
+       margin-bottom: 100px;
+   }
+   
+   .iot-introduce .introduce-img {
+       width: 310px;
+       height: 288px;
+       position: absolute;
+       left: 0;
+       top: 0px;
+       background-image: url("../images/iot_ng.gif");
+   }
+   
+   .introduce-text >p {
+       line-height: 30px;
+       text-indent: 2em;
+   }
+   /*我们的服务*/
+   
+   .serve-list {
+       margin-bottom: 150px;
+   }
+   
+   .serve-list li {
+       float: left;
+       width: 310px;
+       height: 300px;
+       margin-right: 160px;
+   }
+   
+   .serve-list li:nth-of-type(3) {
+       margin-right: 0;
+   }
+   
+   .serve-list li .img {
+       width: 310px;
+       height: 200px;
+       background-image: url("../images/iot_serve_1.gif");
+   }
+   
+   .serve-list li:nth-of-type(2) .img {
+       background-image: url("../images/iot_serve_2.gif");
+   }
+   
+   .serve-list li:nth-of-type(3) .img {
+       background-image: url("../images/iot_serve_3.gif");
+   }
+   
+   .serve-list li h3 {
+       margin-top: 30px;
+       font-size: 22px;
+       font-weight: 700;
+       text-align: center;
+       color: #2c86ed;
+   }
+   
+   .serve-list li p {
+       color: #2c86ed;
+       text-align: center;
+       margin-top: 20px;
+   }
+   /*合作流程*/
+   
+   .flow-dev .title {
+       position: relative;
+       height: 200px;
+   }
+   
+   .flow-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .flow-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .flow {}
+   
+   .flow li {
+       float: left;
+       height: 370px;
+       width: 177px;
+       margin: 0 15px;
+   }
+   
+   .flow li .flow-text {
+       height: 68px;
+       padding: 15px 15px 0px 15px;
+       font-size: 12px;
+       color: #878787;
+       border: 1px solid #2c86ed;
+       border-radius: 10px;
+   }
+   
+   .flow li .flow-img {
+       margin-top: 15px;
+       padding: 0 80px;
+       height: 110px;
+       background-image: url("../images/home_arrows_up.gif");
+       -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+       background-clip: padding-box;
+       -webkit-background-origin: content-box;
+       background-origin: content-box;
+       background-repeat: no-repeat;
+   }
+   
+   .flow li.odd {}
+   
+   .flow li.even {
+       margin-top: 210px;
+       margin-bottom: 100px;
+   }
+   
+   .flow li.even .flow-img {
+       background-image: url("../images/home_arrows_down.gif");
+   }
+   
+   .flow li .flow-icon {
+       position: relative;
+       width: 84px;
+       height: 60px;
+       padding: 0px 45px;
+       background-image: url("../images/home_linkup.jpg");
+       -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+       background-clip: padding-box;
+       -webkit-background-origin: content-box;
+       background-origin: content-box;
+       background-repeat: no-repeat;
+       -webkit-background-size: 100% 100%;
+       background-size: 100% 100%;
+   }
+   
+   .flow li:nth-of-type(2) .flow-icon {
+       background-image: url("../images/home_scheme.jpg");
+   }
+   
+   .flow li:nth-of-type(3) .flow-icon {
+       background-image: url("../images/home_interactivedesign.jpg");
+   }
+   
+   .flow li:nth-of-type(4) .flow-icon {
+       background-image: url("../images/home_visualdesign.jpg");
+   }
+   
+   .flow li:nth-of-type(5) .flow-icon {
+       background-image: url("../images/home_develop.jpg");
+   }
+   
+   .flow li:nth-of-type(6) .flow-icon {
+       background-image: url("../images/home_qualityaudit.jpg");
+   }
+   
+   .flow li .flow-title {
+       padding-top: 20px;
+       text-align: center;
+       font-weight: 700;
+       font-size: 28px;
+   }
+   
+   .flow li .flow-arrows {
+       position: absolute;
+       font-size: 40px;
+       color: #2c86ed;
+       right: -40px;
+       top: 7px;
+       font-weight: 700;
+   }

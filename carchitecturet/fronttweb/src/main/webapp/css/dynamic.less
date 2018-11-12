@@ -1,0 +1,288 @@
+// 动态翻转卡牌
+.dynamicbox{
+    background-color: #e2e2e2;
+    height: 650px;
+    >.dynamic{
+        position: relative;
+        margin: 0 auto;
+        width: 1245px;
+        height: 575px;
+        >.item{
+            position: absolute;
+            width: 300px;
+            height: 180px;
+            border-radius: 10px;
+            overflow: hidden;
+            -webkit-perspective: 180px;
+            -moz-perspective: 180px;
+            >div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                -webkit-transform-style: preserve-3d;
+                -moz-transform-style: preserve-3d;
+                -webkit-transition: .5s ease-in-out ;
+                -moz-transition:  .5s ease-in-out ;
+                /*动画元素背后设置为hidden*/
+                -webkit-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+            }
+            >.boxo{
+                display: block;
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+                position: relative;
+                >.oimg{
+                    position: absolute;
+                    top: 40px;
+                    left: 40px;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url("../images/dynamic_1.png");
+                }
+                >.text{
+                    padding-left: 160px;
+                    font-size: 23px;
+                    font-weight: 700;
+                    line-height: 180px;
+                    height: 180px;
+                }
+            }
+            >.boxt{
+                position: absolute;
+                display: block;
+                background-color: #fff;
+                height: 100%;
+                width: 300px;
+                >.text{
+                    padding: 10px;
+                    height: 160px;
+                    width: 280px;
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-align: center;
+                    display: table;
+                    vertical-align:middle;
+                    display: table-cell;
+                }
+            }
+            >.boxs{
+                display: none;
+                z-index: 0;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                line-height: 180px;
+                font-size: 23px;
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+        >.item:nth-of-type(1){
+            top: 40px;
+            left: 0;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_1.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_1.png");
+            }
+        }
+        >.item:nth-of-type(2){
+            top: 40px;
+            left: 315px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_2.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_2.png");
+            }
+        }
+        >.item:nth-of-type(3){
+            top: 40px;
+            left: 630px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_3.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_3.png");
+            }
+        }
+        >.item:nth-of-type(4){
+            top: 40px;
+            left: 945px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_4.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_4.png");
+            }
+        }
+        >.item:nth-of-type(5){
+            top: 235px;
+            left: 0;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_5.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_5.png");
+            }
+        }
+        >.item:nth-of-type(6){
+            top: 235px;
+            left: 315px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_6.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_6.png");
+            }
+        }
+        >.item:nth-of-type(7){
+            top: 235px;
+            left: 630px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_7.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_7.png");
+            }
+        }
+        >.item:nth-of-type(8){
+            top: 235px;
+            left: 945px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_8.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_8.png");
+            }
+        }
+        >.item:nth-of-type(9){
+            top: 430px;
+            left: 0;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_9.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_9.png");
+            }
+        }
+        >.item:nth-of-type(10){
+            top: 430px;
+            left: 315px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_10.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_10.png");
+            }
+        }
+        >.item:nth-of-type(11){
+            top: 430px;
+            left: 630px;
+            >.boxo{
+                >.oimg{
+                    background-image: url("../images/dynamic_11.png");
+                }
+            }
+            >.boxs{
+                background-image: url("../images/dynamic_bg_11.png");
+            }
+        }
+        >.item:nth-of-type(12){
+            top: 430px;
+            left: 945px;
+            >.boxo{
+                >.text{
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            >.boxs{
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+}
+// 首页
+.dynamicbox{
+    >.dynamic{
+        >.item:hover >.boxo{
+            -webkit-transform: rotateY(-180deg);
+            -moz-transform: rotateY(-180deg);
+        }
+        >.item:hover >.boxt{
+            -webkit-transform: rotateY(0);
+            -moz-transform: rotateY(0);
+        }
+        >.item{
+            >.boxo{
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+                z-index: 2;
+            }
+            >.boxt{
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                z-index: 1;
+            }
+            >.boxs{
+
+            }
+        }
+    }
+}
+// 互联网
+.dynamicbox.internet{
+    >.dynamic{
+        >.item:nth-of-type(2),
+        >.item:nth-of-type(4),
+        >.item:nth-of-type(5),
+        >.item:nth-of-type(7),
+        >.item:nth-of-type(10){
+            >.boxs{
+                display: block;
+                z-index: 3;
+            }
+        }
+    }
+}
+// 物联网
+.dynamicbox.iot{
+    >.dynamic{
+        >.item:nth-of-type(1),
+        >.item:nth-of-type(3),
+        >.item:nth-of-type(6),
+        >.item:nth-of-type(8),
+        >.item:nth-of-type(9),
+        >.item:nth-of-type(11){
+            >.boxs{
+                display: block;
+                z-index: 3;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.top {
+    height: 1.866667rem;
+    padding: 0.32rem;
+}
+
+.top >h1 {
+    text-indent: -2000em;
+    width: 1.866667rem;
+    height: 1.866667rem;
+    background-image: url("../images/logo.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.top >.fr {
+    font-size: 0.32rem;
+    line-height: 1.866667rem;
+}
+
+.title {
+    height: 2.133333rem;
+    line-height: 2.133333rem;
+    text-align: center;
+    font-size: 0.426667rem;
+    font-weight: 700;
+}
+
+.img {
+    height: 7.2rem;
+    text-align: center;
+    position: relative;
+}
+
+.img >img {
+    display: inline-block;
+    width: 3.093333rem;
+    height: 4.426667rem;
+}
+
+.img > ul {}
+
+.img > ul li {
+    position: absolute;
+    font-size: 0.32rem;
+}
+
+.img > ul li:nth-of-type(1),
+.img > ul li:nth-of-type(3) {
+    left: 0.32rem;
+    top: 1.0rem;
+}
+
+.img > ul li:nth-of-type(3) {
+    top: 3.0rem;
+}
+
+.img > ul li:nth-of-type(2),
+.img > ul li:nth-of-type(4) {
+    right: 0.32rem;
+    top: 1.0rem;
+}
+
+.img > ul li:nth-of-type(4) {
+    top: 3.0rem;
+}
+
+.content {
+    font-size: 0.373333rem;
+    text-align: center;
+}
+
+.content >p {
+    display: inline-block;
+    width: 8.0rem;
+    text-align: left;
+    text-indent: 2em;
+}

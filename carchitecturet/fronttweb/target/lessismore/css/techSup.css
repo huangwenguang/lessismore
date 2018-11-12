@@ -1,0 +1,65 @@
+.img {
+    background-image: url("../images/techSup_img.png");
+}
+
+
+/*小程序开发*/
+
+.title {
+    padding-top: 150px;
+    position: relative;
+    height: 200px;
+}
+
+.title h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 58px;
+    color: #2C86ED;
+}
+
+.title > span {
+    width: 220px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    background-color: #FFB92D;
+}
+
+/*我们的服务  */
+.serverBox{
+    height: 280px;
+}
+.server{
+    float: left;
+    width: 310px;
+    height: 200px;
+    text-align: center;
+}
+
+.server:nth-child(1),
+.server:nth-child(2)
+{
+    margin-right: 160px;
+}
+
+.serverTitle{
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+  color: rgb(44, 134, 237);
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.serverSubTitle{
+  font-size: 12px;
+  font-family: "Microsoft YaHei";
+  color: rgb(44, 134, 237);
+  line-height: 25px;
+  font-weight: bold;  
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>商城开发</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta name="Author" content="lx" />
+    <meta name="Copyright" content="少即多科技有限公司" />
+    <meta name="keywords" content="少即多科技有限公司" />
+    <meta name="description" content="APP开发，小程序开发，游戏开发，软件开发，网站开发，公众号开发" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="Shortcut Icon" href="./images/logo.ico" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- public css -->
+    <link rel="stylesheet" href="./css/public.css">
+    <!-- index css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Demo styles -->
+    <style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide lastslide">
+                <div class="top">
+                    <h1 class="fl ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">少即多科技有限公司</h1>
+                    <div class="fr ani " swiper-animate-effect="fadeInRightBig " swiper-animate-duration="0.8s " swiper-animate-delay="0.3s ">
+                        <p>少即多科技 专注研发</p>
+                    </div>
+                </div>
+                <div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <p>
+                        商城开发
+                    </p>
+                </div>
+                <div class="img ani " swiper-animate-effect="flip " swiper-animate-duration="0.8s " swiper-animate-delay="0.3s ">
+                    <img src="images/website-dev_1.png" alt="">
+                </div>
+                <div class="content ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <p>
+                        商城开发主要是指开发网上购物网站。少即多科技有限公司可以为各种企业搭建多用户共存的商城平台，提供完善的一条龙的服务，全方位把控，帮助企业和个人打造属于自己的商城，打造线上线下渠道，打造强大的商城系统。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="swiper-project" id="project-box">
+        <div class="swiper-wrapper" id="project">
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    
+    <script src="./js/jquery.min.js"></script>
+    <!-- Flexible -->
+    <script src="./js/flexible.js "></script>
+    <!-- Swiper JS -->
+    <script src="./js/swiper.min.js "></script>
+    <script src="./js/swiper.animate1.0.2.min.js "></script>
+    <script src="./../config.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+
+    getproject()
+    function getproject() {
+        $.ajax({
+            type: "get",
+            url: config.server + "/cover/coverList.do",
+            data: {
+                typeId: 7
+            },
+            dataType: "json",
+            success: function(data) {
+                console.log(data)
+                if(data.status === 1) {
+                    // var html = template('projecttel', data);
+                    // $('#project').html(html);
+                    var html = ''
+                    for (var i = 0; i < data.data.length; i++) {
+                        html +='<div class="swiper-slide projectbox"><div class="project-box"><div class="project" data-id=' + data.data[i].cId+ '><div class="project-title">线上项目</div><img src="'+ data.data[i].img.lg +'" alt=""><p>'+ data.data[i].content +'</p></div></div></div>'
+                    }
+                    $(".lastslide").after(html);
+                    var swiper = new Swiper('.swiper-container', {
+                        // pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        direction: 'vertical',
+                        onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+                            swiperAnimateCache(swiper); //隐藏动画元素 
+                            swiperAnimate(swiper); //初始化完成开始动画
+                            console.log(123);
+                        },
+                        onSlideChangeEnd: function(swiper) {
+                            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                            console.log(456);
+                        }
+                    });
+                    // var cId = data.data[0].cId;
+                    // projectinit(cId)
+
+
+
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    };
+
+    //显示遮罩层    
+    function showMask(){     
+        $("#mask").show();     
+    }  
+    //隐藏遮罩层  
+    function hideMask(){     
+        $("#mask").hide();     
+    }
+    $("body").on("click",".project",function(){
+        projectinit($(this).attr("data-id"))
+        $(".project").css("z-index",1000);
+        showMask();
+        $(".swiper-project").show();
+    })
+    $("body").on("click",".swiper-project .swiper-slide",function(){
+        hideMask();
+        $(".project").css("z-index",1200);
+        $(".swiper-project").hide();
+    })
+    function projectinit(cId){
+        $.ajax({
+            type: "get",
+            url: config.server + "/detail/detailList.do",
+            data: {
+                cId: cId
+            },
+            dataType: "json",
+            success: function(data) {
+                console.log(data)
+                if(data.status === 1) {
+                    var html = '';
+                    for (var i = 0; i < data.data.length; i++) {
+                        html += '<div class="swiper-slide"><img src="'+ data.data[i].urls.lg+'" alt=""><p>'+ data.data[i].contents+'</p></div>'
+                    }
+                    $("#project").html(html);
+                    var swiper = new Swiper('#project-box', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true
+                    })
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    } 
+    </script>
+</body>
+
+</html>

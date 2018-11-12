@@ -1,0 +1,103 @@
+.img {
+    background-image: url("../images/humanAssig_img.png");
+}
+
+
+/*小程序开发*/
+
+.title {
+    /* padding-top: 150px; */
+    position: relative;
+    height: 150px;
+}
+
+.title h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 58px;
+    color: #2C86ED;
+}
+
+.title > span {
+    width: 220px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    margin: auto;
+    background-color: #FFB92D;
+}
+
+.assigBox{
+    height: 450px;
+    width: 1250px;
+    margin-bottom: 170px;
+}
+
+.assig{
+    width: 625px;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+}
+
+.assig>img{
+    margin-top: 50px;
+    position: relative;
+}
+
+.assig>div{
+  border-radius: 10px;
+  background: url(../images/assigRbg.png) no-repeat;
+  width: 390px;
+  height: 460px;
+  margin: 0 auto;
+}
+
+.assigR{
+  height: 160px;
+  width: 340px;
+  position: relative;
+  top: 145px; 
+}
+
+.assig p{
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  color: rgb(252, 252, 252);
+  line-height: 30px;
+}
+
+
+/*人力资源服务介绍  */
+.introduce{
+  background-color: rgb(77, 131, 229);
+  top: 4627px;
+  width: 100%;
+  height: 680px;
+  /* opacity: 0.8; */
+}
+
+.introduceContainer{
+    position: relative;
+    height: 680px;
+    margin: 0 auto;
+    width: 900px;
+    background: url(../images/humanAssigBg.png) no-repeat center center;
+}
+
+.introduceText{
+    position: relative;
+    top: 200px;
+}
+
+.introduceText>p{
+  font-size: 25px;
+  font-family: "SimHei";
+  color: rgb(255, 255, 255);
+  line-height: 50px;
+  text-align: left;
+}

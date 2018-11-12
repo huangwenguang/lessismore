@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.CoverDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.Cover">
+		INSERT INTO TB_COVER (
+			ID, CONTENTMAX, CONTENTMIN, PID, TYPE
+		) VALUES (
+			#{id}, #{contentmax}, #{contentmin}, #{pid}, #{type}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.Cover">
+		DELETE FROM TB_COVER <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.Cover">
+		UPDATE TB_COVER <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.Cover" resultType="_long">
+		SELECT COUNT(1) FROM TB_COVER <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.Cover" resultMap="CoverResultMap">
+		SELECT * FROM TB_COVER <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="CoverResultMap" type="com.lessismore.commont.model.Cover">
+		<id property="id" column="ID" />
+		<result property="contentmax" column="CONTENTMAX" />
+		<result property="contentmin" column="CONTENTMIN" />
+		<result property="pid" column="PID" />
+		<result property="type" column="TYPE" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.contentmax != null">CONTENTMAX = #{entity.contentmax},</if>
+			<if test="entity.contentmin != null">CONTENTMIN = #{entity.contentmin},</if>
+			<if test="entity.pid != null">PID = #{entity.pid},</if>
+			<if test="entity.type != null">TYPE = #{entity.type},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

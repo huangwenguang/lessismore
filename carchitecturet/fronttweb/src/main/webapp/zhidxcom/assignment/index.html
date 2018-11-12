@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>技术外派</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta name="Author" content="lx" />
+    <meta name="Copyright" content="少即多科技有限公司" />
+    <meta name="keywords" content="少即多科技有限公司" />
+    <meta name="description" content="APP开发，小程序开发，游戏开发，软件开发，网站开发，公众号开发" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="Shortcut Icon" href="./images/logo.ico" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- public css -->
+    <link rel="stylesheet" href="./css/public.css">
+    <!-- index css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Demo styles -->
+    <style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="top">
+                    <h1 class="fl ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">少即多科技有限公司</h1>
+                    <div class="fr ani " swiper-animate-effect="fadeInRightBig " swiper-animate-duration="0.8s " swiper-animate-delay="0.3s ">
+                        <p>少即多科技 专注研发</p>
+                    </div>
+                </div>
+                <div class="title ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <p>
+                        技术外派
+                    </p>
+                </div>
+                <div class="img ani " swiper-animate-effect="flip " swiper-animate-duration="0.8s " swiper-animate-delay="0.3s ">
+                    <img src="images/assignment_1.png" alt="">
+                </div>
+                <div class="content ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                    <p>
+                        外派是指相互有关联(如合作等)的企业,公司等派遣本公司人员前往他公司处进行学习,工作等,至于工资等福利待遇等可能由对方公司支付也可能由本方公司支付
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide assignmentbox">
+                <div class='title'>外派成功案例</div>
+                <ul class="assignment-box">
+                  
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./js/jquery.min.js"></script>
+    <!-- Flexible -->
+    <script src="./js/flexible.js "></script>
+    <!-- Swiper JS -->
+    <script src="./js/swiper.min.js "></script>
+    <script src="./js/swiper.animate1.0.2.min.js "></script>
+    <script src="./../config.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    
+
+
+    getproject()
+    function getproject() {
+        $.ajax({
+            type: "get",
+            url: config.server + "/tecCoope/list.do",
+            dataType: "json",
+            success: function(res) {
+                var res = {"status":1,"message":[],"data":[{"content":"广州参数信息科技有限公司合作处理广州市住房管理公积金APP新技术扫一扫支付功能","imgs":[],"Logo":{"sm":"http://otok28xbn.bkt.clouddn.com/FuhLPiFtdYtAuHorNN8EsO-CcIaJ?imageView2/0/h/64","md":"http://otok28xbn.bkt.clouddn.com/FuhLPiFtdYtAuHorNN8EsO-CcIaJ?imageView2/0/h/300","lg":"http://otok28xbn.bkt.clouddn.com/FuhLPiFtdYtAuHorNN8EsO-CcIaJ?imageView2/0/h/600"},"name":"广州参数信息科技有限公司"},{"content":"广州万佳服装批发广场合作现场培训万佳商铺招租操作系统的使用","imgs":[{"sm":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/64","md":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/300","lg":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/600"}],"Logo":{"sm":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/64","md":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/300","lg":"http://otok28xbn.bkt.clouddn.com/Fve2GJQZNa0H5hdYv24Qlvc3z423?imageView2/0/h/600"},"name":"广州万佳服装批发广场"},{"content":"广州云青汇信息科技有限公司合作到现场处理猎聘网技术开发","imgs":[],"Logo":{"sm":"http://otok28xbn.bkt.clouddn.com/Fjmfjx2lVcK-Hc1O4hMPxHcq8K8P?imageView2/0/h/64","md":"http://otok28xbn.bkt.clouddn.com/Fjmfjx2lVcK-Hc1O4hMPxHcq8K8P?imageView2/0/h/300","lg":"http://otok28xbn.bkt.clouddn.com/Fjmfjx2lVcK-Hc1O4hMPxHcq8K8P?imageView2/0/h/600"},"name":"广州云青汇信息科技有限公司"}],"extra":{}}
+                if(res.status === 1) {
+                    var html = '';
+                    var html1 = '';
+                    var num = 0;
+                    for (var i = 0; i < res.data.length; i++) {
+                        if (i >=3) {
+                            html1 +='<li class="assignment clearfix"><div class="assignment-name">'+ res.data[i].name +'</div><div class="assignment-img"><img src="'+ res.data[i].Logo.lg +'"></div><div class="assignment-content">'+ res.data[i].content+'</div></li>'
+                        }else{
+                            html += '<li class="assignment clearfix"><div class="assignment-name">'+ res.data[i].name +'</div><div class="assignment-img"><img src="'+ res.data[i].Logo.lg +'"></div><div class="assignment-content">'+ res.data[i].content+'</div></li>'
+                        }
+                        if (i < 3) {
+                            $(".assignmentbox:last .assignment-box").html(html);
+                        }else if (i > 2 && i+1 === res.data.length){
+                            var last = $(".swiper-wrapper .swiper-slide:last").clone();
+                            $(last).find(".assignment-box").html('');
+                            $(last).find(".assignment-box").html(html1);
+                            $(".swiper-wrapper .swiper-slide:last").after(last);
+                        }
+                    }
+                    var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        direction: 'vertical',
+                        onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+                            swiperAnimateCache(swiper); //隐藏动画元素 
+                            swiperAnimate(swiper); //初始化完成开始动画
+                            console.log(123);
+                        },
+                        onSlideChangeEnd: function(swiper) {
+                            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                            console.log(456);
+                        }
+                    });
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    };
+
+
+     
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,817 @@
+body {
+    background-color: white;
+}
+
+.kb {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #E5E5E5;
+}
+
+html {
+    background: #fff;
+    overflow: auto;
+    display: block;
+}
+
+body {
+    font-family: "SimHei";
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0 none;
+    display: block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    -moz-outline-style: none;
+    border: 0px;
+    blr: expression(this.onFocus=this.blur());
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer,
+article,
+aside,
+section,
+nav,
+menu,
+hgroup,
+details,
+dialog,
+figure,
+figcaption {
+    display: block
+}
+
+ol,
+li,
+ul,
+dl,
+dt,
+dd {
+    list-style: none;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+button,
+submit,
+input,
+select {
+    vertical-align: middle;
+}
+
+button,
+submit {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: lighter;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline-style: none;
+    outline-width: 0pt;
+    padding: 0;
+    margin: 0;
+}
+
+b,
+em,
+i {
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input {
+    border: none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.container {
+    width: 1250px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.etc {
+    box-sizing: border-box;
+}
+
+.img {
+    height: 600px;
+    width: 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 1600px) {
+    html {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    html {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    html {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    html {
+        width: 106%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        width: 115%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        width: 126%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        width: 140%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        width: 155%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        width: 185%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        width: 215%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        width: 260%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        width: 290%;
+    }
+}
+
+
+/*合作流程*/
+
+.process{
+    position: relative;
+}
+.flow{
+    padding:180px 15px;
+}
+.flow .item{
+    float: left;
+    width: 125px;
+    padding:0  13.5px;
+}
+.flow .item .flow-title{
+    line-height: 100px;
+    font-weight: 700;
+    width: 125px;
+    text-align: center;
+    font-size: 26px;
+}
+.flow .item .flow-img{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/flow_1.png");
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+.flow .item .flow-item{
+    margin: 35px auto;
+    width: 126px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #2687ff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.flow .item .flow-text{
+    font-size: 14px;
+    line-height: 34px;
+    text-align: center;
+    color: #373737;
+}
+.flow .item:nth-of-type(2) .flow-img{
+    background-image: url("../images/flow_2.png");
+}
+.flow .item:nth-of-type(3) .flow-img{
+    background-image: url("../images/flow_3.png");
+}
+.flow .item:nth-of-type(4) .flow-img{
+    background-image: url("../images/flow_4.png");
+}
+.flow .item:nth-of-type(5) .flow-img{
+    background-image: url("../images/flow_5.png");
+}
+.flow .item:nth-of-type(6) .flow-img{
+    background-image: url("../images/flow_6.png");
+}
+.flow .item:nth-of-type(7) .flow-img{
+    background-image: url("../images/flow_7.png");
+}
+.flow .item:nth-of-type(8) .flow-img{
+    background-image: url("../images/flow_8.png");
+}
+
+.client{
+}
+.client .item{
+    position: absolute;
+    width: 125px;
+    top: 150px;
+}
+.client .item:nth-of-type(1){
+    left: 333px;
+}
+.client .item:nth-of-type(2){
+    left: 487px;
+}
+.client .item:nth-of-type(3){
+    top: 235px;
+    left: 710px;
+}
+.client .item:nth-of-type(4){
+    left: 940px;
+}
+.client .item .flow-title{
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+}
+.client .item .flow-img{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/flow_loop.png");
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+}
+.client .item:nth-of-type(3) .flow-img{
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+ /*我们的团队*/
+.weteam-box{
+    
+}
+.weteam-box .title{
+    padding-top:50px;
+}
+.weteam-box .weteam-text{
+    text-align: center;
+    line-height: 50px;
+    font-size: 26px;
+    text-indent: 2em;
+}
+.weteam-box .weteam-item{
+    padding: 15px 0;
+}
+.weteam-box .weteam-item li{
+    float: left;
+    width: 235px;
+    height: 235px;
+    margin-right: 18.5px;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    margin-top: 10px;
+}
+.weteam-box .weteam-item li:nth-last-of-type(1){
+    background-image: url("../images/weteam_5.jpg");
+}
+.weteam-box .weteam-item li:nth-of-type(5n){
+    margin-right: 0;
+}
+.weteam-box .weteam-item li:nth-of-type(1){
+    background-image: url("../images/weteam_1.jpg");
+}
+.weteam-box .weteam-item li:nth-of-type(2){
+    background-image: url("../images/weteam_2.jpg");
+}
+.weteam-box .weteam-item li:nth-of-type(3){
+    background-image: url("../images/weteam_3.jpg");
+}
+.weteam-box .weteam-item li:nth-of-type(4){
+    background-image: url("../images/weteam_4.jpg");
+}
+/*页面公共样式  */
+
+.app-introduce-top {
+    position: relative;
+    top: -100px;
+}
+
+.app-introduce {
+    height: 400px;
+    line-height: 400px;
+    vertical-align: middle;
+}
+
+.app-introduce .introduce-text {
+    padding-top: 50px;
+    display: inline;
+    width: 560px;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+.app-introduce .introduce-img {
+    width: 320px;
+    height: 400px;
+    margin-right: 170px;
+    background-image: url("../images/jishuzhichi.png");
+    background-repeat: no-repeat;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.introduce-img>img {
+    width: 100%;
+}
+
+.introduce-img>span {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background: #444;
+    opacity: 0.7;
+    width: 100%;
+    color: white;
+    z-index: 20;
+    font-size: 24px;
+}
+
+.introduce-text>p {
+    line-height: 30px;
+    text-indent: 2em;
+    font-size:16px;
+}
+
+
+/*项目列表 */
+
+.appList {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+.appList .title{
+    padding-top: 0px!important;
+    position: relative;
+    height: 100px!important;
+    line-height: 100px!important;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+}
+
+.appItem {
+    margin-right: 145px;
+    margin-bottom: 100px;
+}
+.appItem:nth-of-type(3n){
+    margin-right: 0px;
+}
+
+.appItem {
+    display: block;
+    background-color:#ddd;
+    width: 320px;
+    height: 400px;
+    line-height: 400px;
+    overflow: hidden;
+    float: left;
+    vertical-align: middle;
+    position: relative;
+}
+
+.appItem div{
+    height: 400px;
+    width: 320px;
+    display: table-cell;
+    line-height: 400px;
+    vertical-align: middle;
+}
+
+.appItem img {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    vertical-align: middle;    
+}
+
+.appItem span {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background: #444;
+    opacity: 0.7;
+    width: 100%;
+    color: white;
+    z-index: 20;
+    font-size: 24px;
+}
+
+
+/*智能家居下拉菜单  */
+
+#dropIcon {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+
+@keyframes ro {
+    form {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(90deg)
+    }
+}
+
+@keyframes roback {
+    form {
+        transform: rotate(90deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+.rotate {
+    animation: ro 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.rotateBack {
+    animation: roback 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+/*下拉菜单  */
+
+#menu {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    left: -575px;
+    top: -20px;
+    /* top: 100px; */
+}
+
+.menuContainer {
+    /* width: 100%; */
+    /* opacity: 1; */
+    position: relative;
+    top: 0px;
+}
+
+.menuList {
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    left: 560px;
+    top: 0px;
+    z-index: 30;
+    /* background: red; */
+}
+
+
+/* .menuList>span */
+
+.menuList>a,
+.menuList>span {
+    position: relative;
+    display: inherit;
+    text-align: center;
+    background: #1B1B1B;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.menuList>a:hover {
+    background: #333;
+}
+.shangxianlingsheng{
+    height: 70px!important;
+}
+.shangxianlingsheng >h2{
+    line-height: 40px!important;
+    font-size: 40px!important;
+    color: #f4b11f!important;
+    font-weight: 400!important;
+    position: relative;
+}
+
+.shangxianlingsheng >h2 >img{
+    position: absolute;
+    top: 0;
+    left: 715px;
+}
+
+.titlecolour >h2{
+    color: #f4b11f!important;
+    font-size: 40px!important;
+}
+.titlecolour{
+    padding-top: 50px!important;
+    height: 70px!important;
+}
+
+/*技术外派*/
+
+.teccoope-box{
+
+}
+.teccoope-box .teccoope{
+    padding: 15px 275px 15px 275px;
+}
+.teccoope-box .teccoope .teccoope-img{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+.teccoope-box .teccoope .teccoope-img img{
+    display:block;
+    width: 200px;
+    height: 200px;
+}
+.teccoope-box .teccoope .teccoope-name{
+    // -webkit-transform: translateY(50%);
+    // -ms-transform: translateY(50%);
+    // -o-transform: translateY(50%);
+    // transform: translateY(50%);
+    float: right;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+    font-size: 20px;
+}
+.teccoope-box .teccoope .teccoope-content{
+    float: right;
+    text-align: center;
+    width: 400px;
+    overflow: hidden;
+    font-size: 14px;
+
+}
+
+/*分享悬浮框*/
+.share_box{
+    position: fixed;
+    right: 0;
+    top: 300px;
+}
+.share_box .share{
+    width: 40px;
+}
+.share_box .share.active .share_item{
+    display: block;
+}
+.share_box .share .share_item{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: #ffba2e;
+    position: relative;
+}
+.share_box .share .share_item#share_button{
+    display: block;
+}
+.share_box .share .share_item#share_wechatmoments .share_wechatmoments,
+.share_box .share .share_item#share_wechatfriends .share_wechatfriends{
+    display: none;
+    position: absolute;
+    left: -150px;
+    top: -95px;
+    width: 130px;
+    height: 150px;
+    background-color: #ffba2e;
+}
+.share_box .share .share_item#share_wechatmoments.active .share_wechatmoments,
+.share_box .share .share_item#share_wechatfriends.active .share_wechatfriends{
+    display: block;
+}
+.share_box .share .share_item#share_wechatmoments .share_wechatmoments .wechatmoments_img,
+.share_box .share .share_item#share_wechatfriends .share_wechatfriends .wechatfriends_img{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-image: url("../images/qrcodepc.png");
+    background-size: 100% 100%;
+}
+.share_box .share .share_item#share_wechatmoments .share_wechatmoments .wechatmoments_text,
+.share_box .share .share_item#share_wechatfriends .share_wechatfriends .wechatfriends_text{
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 100%;   
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+.share_box .share .share_item#share_wechatmoments .share_wechatmoments .wechatmoments_text:before,
+.share_box .share .share_item#share_wechatfriends .share_wechatfriends .wechatfriends_text:before{
+    position: absolute;
+    bottom: 25px;
+    right: -15px;
+    content: '';
+    border-right: 0px solid transparent;
+    border-left: 15px solid #ffba2e;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+
+}
+.share_box .share .share_item .share_link{
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+.share_box .share .share_item .share_link .share_icon{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.share_box .share .share_item#share_sina .share_link .share_icon{
+    background-image: url("../images/share_1.png");
+}
+.share_box .share .share_item#share_copylink .share_link .share_icon{
+    background-image: url("../images/share_2.png");
+}
+.share_box .share .share_item#share_qzone .share_link .share_icon{
+    background-image: url("../images/share_3.png");
+}
+.share_box .share .share_item#share_qq .share_link .share_icon{
+    background-image: url("../images/share_4.png");
+}
+.share_box .share .share_item#share_wechatmoments .share_link .share_icon{
+    background-image: url("../images/share_5.png");
+}
+.share_box .share .share_item#share_wechatfriends .share_link .share_icon{
+    background-image: url("../images/share_6.png");
+}
+.share_box .share .share_item#share_button .share_link .share_icon{
+    background-image: url("../images/share_7.png");
+    transform: rotate(180deg);
+}
+.share_box .share .share_item .share_link .share_text{
+    display: table-cell;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: transparent;
+    vertical-align: middle;
+}
+.share_box .share .share_item.active .share_link .share_text{
+    color: #fff;
+}
+.share_box .share .share_item.active .share_link .share_icon{
+    display: none;
+}

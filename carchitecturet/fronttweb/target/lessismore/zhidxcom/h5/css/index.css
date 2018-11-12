@@ -1,0 +1,49 @@
+.top {
+    height: 1.866667rem;
+    padding: 0.32rem;
+}
+
+.top >h1 {
+    text-indent: -2000em;
+    width: 1.866667rem;
+    height: 1.866667rem;
+    background-image: url("../images/logo.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.top >.fr {
+    font-size: 0.32rem;
+    line-height: 1.866667rem;
+}
+
+.title {
+    height: 2.133333rem;
+    line-height: 2.133333rem;
+    text-align: center;
+    font-size: 0.426667rem;
+    font-weight: 700;
+}
+
+.img {
+    height: 7.2rem;
+    text-align: center;
+}
+
+.img >img {
+    display: inline-block;
+    width: 10.0rem;
+    height: 5.573333rem;
+}
+
+.content {
+    font-size: 0.373333rem;
+    text-align: center;
+}
+
+.content >p {
+    display: inline-block;
+    width: 8.0rem;
+    text-align: left;
+    text-indent: 2em;
+}

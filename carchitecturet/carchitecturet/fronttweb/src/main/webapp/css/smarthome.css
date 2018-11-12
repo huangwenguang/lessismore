@@ -1,0 +1,101 @@
+   .img {
+       background-image: url("../images/smarthome_img.png");
+   }
+   
+   .smarthome-dev {
+       padding-bottom: 100px;
+   }
+   
+   .smarthome-dev .title {
+       padding-top: 150px;
+       position: relative;
+       height: 200px;
+   }
+   
+   .smarthome-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .smarthome-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .smarthome-introduce {
+       position: relative;
+   }
+   
+   .smarthome-introduce .introduce-text {
+       float: right;
+       width: 800px;
+       font-size: 14px;
+       color: #666666;
+       margin-bottom: 100px;
+   }
+   
+   .smarthome-introduce .introduce-img {
+       width: 322px;
+       height: 292px;
+       position: absolute;
+       left: 0;
+       top: -100px;
+       background-image: url("../images/smarthome_ng.gif");
+   }
+   
+   .introduce-text >p {
+       line-height: 30px;
+       text-indent: 2em;
+   }
+   /*解决方案*/
+   
+   .smarthome-solution {
+       background-color: #fbfcf7;
+       padding-bottom: 150px;
+   }
+   
+   .smarthome-solution .title {
+       padding-top: 150px;
+       position: relative;
+       height: 200px;
+   }
+   
+   .smarthome-solution .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .smarthome-solution .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .solution-bg {
+       width: 940px;
+       height: 560px;
+       background-image: url("../images/smarthome_bg.gif");
+       -webkit-background-origin: content-box;
+       background-origin: content-box;
+       -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+       background-clip: padding-box;
+       background-repeat: no-repeat;
+   }

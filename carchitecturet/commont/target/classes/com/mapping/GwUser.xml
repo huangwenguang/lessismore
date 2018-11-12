@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.GwUserDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.GwUser">
+		INSERT INTO TB_GW_USER (
+			ID, CITY, CREATE_TIME, IP, ISVISIT, NEEDS, PHONE, PLATFORM, QQ, REMARK, SINCERITY, TYPE, USERNAME, VISIT_TIME, VISITRESULT, WEIXIN
+		) VALUES (
+			#{id}, #{city}, #{createTime}, #{ip}, #{isvisit}, #{needs}, #{phone}, #{platform}, #{qq}, #{remark}, #{sincerity}, #{type}, #{username}, #{visitTime}, #{visitresult}, #{weixin}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.GwUser">
+		DELETE FROM TB_GW_USER <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.GwUser">
+		UPDATE TB_GW_USER <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.GwUser" resultType="_long">
+		SELECT COUNT(1) FROM TB_GW_USER <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.GwUser" resultMap="GwUserResultMap">
+		SELECT * FROM TB_GW_USER <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="GwUserResultMap" type="com.lessismore.commont.model.GwUser">
+		<id property="id" column="ID" />
+		<result property="city" column="CITY" />
+		<result property="createTime" column="CREATE_TIME" />
+		<result property="ip" column="IP" />
+		<result property="isvisit" column="ISVISIT" />
+		<result property="needs" column="NEEDS" />
+		<result property="phone" column="PHONE" />
+		<result property="platform" column="PLATFORM" />
+		<result property="qq" column="QQ" />
+		<result property="remark" column="REMARK" />
+		<result property="sincerity" column="SINCERITY" />
+		<result property="type" column="TYPE" />
+		<result property="username" column="USERNAME" />
+		<result property="visitTime" column="VISIT_TIME" />
+		<result property="visitresult" column="VISITRESULT" />
+		<result property="weixin" column="WEIXIN" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.city != null">CITY = #{entity.city},</if>
+			<if test="entity.createTime != null">CREATE_TIME = #{entity.createTime},</if>
+			<if test="entity.ip != null">IP = #{entity.ip},</if>
+			<if test="entity.isvisit != null">ISVISIT = #{entity.isvisit},</if>
+			<if test="entity.needs != null">NEEDS = #{entity.needs},</if>
+			<if test="entity.phone != null">PHONE = #{entity.phone},</if>
+			<if test="entity.platform != null">PLATFORM = #{entity.platform},</if>
+			<if test="entity.qq != null">QQ = #{entity.qq},</if>
+			<if test="entity.remark != null">REMARK = #{entity.remark},</if>
+			<if test="entity.sincerity != null">SINCERITY = #{entity.sincerity},</if>
+			<if test="entity.type != null">TYPE = #{entity.type},</if>
+			<if test="entity.username != null">USERNAME = #{entity.username},</if>
+			<if test="entity.visitTime != null">VISIT_TIME = #{entity.visitTime},</if>
+			<if test="entity.visitresult != null">VISITRESULT = #{entity.visitresult},</if>
+			<if test="entity.weixin != null">WEIXIN = #{entity.weixin},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

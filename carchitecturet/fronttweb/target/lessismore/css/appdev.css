@@ -1,0 +1,139 @@
+.img {
+    background-image: url("../images/app_img.png");
+}
+
+
+/*App开发*/
+
+.app-dev {}
+
+.app-dev .title {
+     padding-top: 150px; 
+    position: relative;
+    height: 200px;
+}
+
+.app-dev .title h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 58px;
+    color: #2C86ED;
+}
+
+.app-dev .title>span {
+    width: 220px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    background-color: #FFB92D;
+}
+
+
+.dev-icon {
+    color: #ffba2e;
+    font-weight: 700;
+}
+
+.dev-icon>div {
+    position: relative;
+    top: -150px;
+    margin-left: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.dev-icon .icon {
+    width: 110px;
+    height: 110px;
+    padding: 0 20px;
+    background-image: url("../images/app_ios.gif");
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+.dev-icon .android .icon {
+    background-image: url("../images/app_android.gif");
+}
+
+.dev-icon .text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feature{
+    margin-bottom: 100px;
+}
+
+.feature-nav li {
+    float: left;
+    width: 350px;
+    height: 100px;
+    margin-right: 100px;
+}
+
+.feature-nav li:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.feature-nav li:nth-of-type(6) {
+    margin-right: 0;
+}
+
+.feature-nav li .icon {
+    width: 35px;
+    height: 40px;
+    background-image: url("../images/app_demand.gif");
+}
+
+.feature-nav li:nth-of-type(2) .icon {
+    background-image: url("../images/app_interactivedesign.gif");
+}
+
+.feature-nav li:nth-of-type(3) .icon {
+    background-image: url("../images/app_producttest.jpg");
+}
+
+.feature-nav li:nth-of-type(4) .icon {
+    background-image: url("../images/app_projectplanning.gif");
+}
+
+.feature-nav li:nth-of-type(5) .icon {
+    background-image: url("../images/app_technologicaldevelopment.gif");
+}
+
+.feature-nav li:nth-of-type(6) .icon {
+    background-image: url("../images/app_updatingmaintenance.gif");
+}
+
+.feature-nav .explain {
+    width: 300px;
+    height: 200px;
+}
+
+.feature-nav .explain h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature-nav .explain p {
+    font-size: 12px;
+    color: #747474;
+}
+
+
+/*合作流程*/
+
+
+.app-introduce .introduce-img.fr{
+    width: 180px;
+    height: auto;
+}

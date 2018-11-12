@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.ReturnparaDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.Returnpara">
+		INSERT INTO TB_RETURNPARA (
+			ID, FOR_ID, RETU_CONTENT, RETU_IS, RETU_NAME, RETU_TYPE
+		) VALUES (
+			#{id}, #{forId}, #{retuContent}, #{retuIs}, #{retuName}, #{retuType}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.Returnpara">
+		DELETE FROM TB_RETURNPARA <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.Returnpara">
+		UPDATE TB_RETURNPARA <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.Returnpara" resultType="_long">
+		SELECT COUNT(1) FROM TB_RETURNPARA <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.Returnpara" resultMap="ReturnparaResultMap">
+		SELECT * FROM TB_RETURNPARA <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="ReturnparaResultMap" type="com.lessismore.commont.model.Returnpara">
+		<id property="id" column="ID" />
+		<result property="forId" column="FOR_ID" />
+		<result property="retuContent" column="RETU_CONTENT" />
+		<result property="retuIs" column="RETU_IS" />
+		<result property="retuName" column="RETU_NAME" />
+		<result property="retuType" column="RETU_TYPE" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.forId != null">FOR_ID = #{entity.forId},</if>
+			<if test="entity.retuContent != null">RETU_CONTENT = #{entity.retuContent},</if>
+			<if test="entity.retuIs != null">RETU_IS = #{entity.retuIs},</if>
+			<if test="entity.retuName != null">RETU_NAME = #{entity.retuName},</if>
+			<if test="entity.retuType != null">RETU_TYPE = #{entity.retuType},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

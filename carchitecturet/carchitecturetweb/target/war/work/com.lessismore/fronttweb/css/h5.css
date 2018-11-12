@@ -1,0 +1,174 @@
+    .img {
+        background-image: url("../images/h5_img.png");
+    }
+    
+    .h5-dev {
+        padding-bottom: 100px;
+    }
+    
+    .title {
+        padding-top: 150px;
+        position: relative;
+        height: 200px;
+    }
+    
+    .title h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 58px;
+        color: #2C86ED;
+    }
+    
+    .title > span {
+        width: 220px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        margin: auto;
+        background-color: #FFB92D;
+    }
+    
+    .h5-introduce {
+        position: relative;
+    }
+    
+    .h5-introduce .introduce-text {
+        width: 800px;
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 100px;
+    }
+    
+    .h5-introduce .introduce-img {
+        width: 332px;
+        height: 286px;
+        position: absolute;
+        right: 0;
+        top: -100px;
+        background-image: url("../images/h5_ng.gif");
+    }
+    
+    .introduce-text >p {
+        line-height: 30px;
+        text-indent: 2em;
+    }
+    /*做网站的优点*/
+    
+    .merit {
+        background-color: #f5f5f5;
+    }
+    
+    .advantage-list {
+        background-color: #f5f5f5;
+        margin-bottom: 150px;
+    }
+    
+    .advantage-list li {
+        float: left;
+        width: 170px;
+        height: 200px;
+    }
+    
+    .advantage-list li:nth-of-type(1) {
+        margin-right: 165px;
+    }
+    
+    .advantage-list li:nth-of-type(2) {
+        width: 245px;
+        margin-right: 140px;
+    }
+    
+    .advantage-list li:nth-of-type(3) {
+        margin-right: 180px;
+    }
+    
+    .advantage-list li .img {
+        width: 170px;
+        height: 145px;
+        background-image: url("../images/h5_Increasesales.gif");
+        -webkit-background-origin: content-box;
+        background-origin: content-box;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        background-clip: padding-box;
+        background-repeat: no-repeat;
+    }
+    
+    .advantage-list li:nth-of-type(2) .img {
+        width: 208px;
+        padding: 0px 19px;
+        background-image: url("../images/h5_enhancevisibility.gif");
+    }
+    
+    .advantage-list li:nth-of-type(3) .img {
+        background-image: url("../images/h5_competitionpromotion.gif");
+    }
+    
+    .advantage-list li:nth-of-type(4) .img {
+        background-image: url("../images/h5_expandmarket.gif");
+    }
+    
+    .advantage-list li h3 {
+        margin-top: 30px;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+    }
+    /*h5建站优势*/
+    /*定制开发*/
+    
+    .custom-list li {
+        float: left;
+        width: 190px;
+        height: 220px;
+        margin-right: 150px;
+        margin-bottom: 150px;
+    }
+    
+    .custom-list li:nth-of-type(4) {
+        margin-right: 0;
+    }
+    
+    .custom-list li .icon {
+        padding: 0 45px;
+        width: 100px;
+        height: 100px;
+        background-image: url("../images/h5_concise.gif");
+        -webkit-background-origin: content-box;
+        background-origin: content-box;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        background-clip: padding-box;
+        background-repeat: no-repeat;
+    }
+    
+    .custom-list li:nth-of-type(2) .icon {
+        background-image: url("../images/h5_seo.gif");
+    }
+    
+    .custom-list li:nth-of-type(3) .icon {
+        background-image: url("../images/h5_experience.gif");
+    }
+    
+    .custom-list li:nth-of-type(4) .icon {
+        background-image: url("../images/h5_usertraffic.gif");
+    }
+    
+    .custom-list .text {
+        margin-top: 30px;
+        font-size: 12px;
+        line-height: 20px;
+        color: #8b8b8b;
+    }
+    
+    .custom-list .title {
+        padding: 0;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 700;
+        height: 30px;
+    }

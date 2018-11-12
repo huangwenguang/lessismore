@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="managerbacktweb"
+  id="myeclipse.1540552629962"
+  context-root="/lessismoreback"
+  j2ee-spec="6.0"
+  archive="managerbacktweb.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

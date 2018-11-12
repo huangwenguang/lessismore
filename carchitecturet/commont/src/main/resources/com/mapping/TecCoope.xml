@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessismore.commont.dao.TecCoopeDao">
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.lessismore.commont.model.TecCoope">
+		INSERT INTO TB_TEC_COOPE (
+			ID, COMPANY_NAME, CONTENT, PID
+		) VALUES (
+			#{id}, #{companyName}, #{content}, #{pid}
+		)
+	</insert>
+
+	<delete id="delete" parameterType="com.lessismore.commont.model.TecCoope">
+		DELETE FROM TB_TEC_COOPE <include refid="CriteriaSQL" />
+	</delete>
+
+	<update id="update" parameterType="com.lessismore.commont.model.TecCoope">
+		UPDATE TB_TEC_COOPE <include refid="SetSQL" /> <include refid="CriteriaSQL" />
+	</update>
+  
+	<select id="selectCount" parameterType="com.lessismore.commont.model.TecCoope" resultType="_long">
+		SELECT COUNT(1) FROM TB_TEC_COOPE <include refid="CriteriaSQL" />
+	</select>
+
+	<select id="selectList" parameterType="com.lessismore.commont.model.TecCoope" resultMap="TecCoopeResultMap">
+		SELECT * FROM TB_TEC_COOPE <include refid="CriteriaSQL" /> <include refid="OrderbySQL" /> <include refid="LimitSQL" />
+	</select>
+
+	<resultMap id="TecCoopeResultMap" type="com.lessismore.commont.model.TecCoope">
+		<id property="id" column="ID" />
+		<result property="companyName" column="COMPANY_NAME" />
+		<result property="content" column="CONTENT" />
+		<result property="pid" column="PID" />
+	</resultMap>
+
+	<sql id="SetSQL">
+		<set>
+			<if test="entity.companyName != null">COMPANY_NAME = #{entity.companyName},</if>
+			<if test="entity.content != null">CONTENT = #{entity.content},</if>
+			<if test="entity.pid != null">PID = #{entity.pid},</if>
+		</set>
+	</sql>
+
+	<sql id="CriteriaSQL">
+		<where>
+			<if test="criteria != null and criteria.notEmpty">
+				<foreach collection="criteria.criterions" item="criterion">
+					<choose>
+						<when test="criterion.noValue">
+							and ${criterion.field} ${criterion.condition}
+						</when>
+						<when test="criterion.singleValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value}
+						</when>
+						<when test="criterion.betweenValue">
+							and ${criterion.field} ${criterion.condition} #{criterion.value} and #{criterion.value2}
+						</when>
+						<when test="criterion.listValue">
+							and ${criterion.field} ${criterion.condition}
+							<foreach collection="criterion.value" item="item" open="(" separator="," close=")">
+								#{item}
+							</foreach>
+						</when>
+					</choose>
+				</foreach>
+			</if>
+		</where>
+	</sql>
+
+	<sql id="OrderbySQL">
+		<if test="criteria != null and criteria.orderly">
+			ORDER BY 
+			<foreach collection="criteria.orderbies" item="orderby" separator=",">
+				${orderby.field} ${orderby.value}
+			</foreach>
+		</if>
+	</sql>
+
+	<sql id="LimitSQL">
+		<if test="criteria != null and criteria.pagination">
+			LIMIT #{criteria.limit.value}, #{criteria.limit.value2}
+		</if>
+	</sql>
+
+</mapper>

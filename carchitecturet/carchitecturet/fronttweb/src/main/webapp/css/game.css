@@ -1,0 +1,153 @@
+   .img {
+       background-image: url("../images/game_img.png");
+   }
+   
+   .game-dev {
+       padding-bottom: 100px;
+   }
+   
+   .game-dev .title {
+       padding-top: 150px;
+       position: relative;
+       height: 200px;
+   }
+   
+   .game-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .game-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .game-introduce {
+       position: relative;
+   }
+   
+   .game-introduce .introduce-text {
+       float: right;
+       width: 800px;
+       font-size: 14px;
+       color: #666666;
+       margin-bottom: 100px;
+   }
+   
+   .game-introduce .introduce-img {
+       width: 400px;
+       height: 229px;
+       position: absolute;
+       left: 0;
+       top: -100px;
+       background-image: url("../images/game_ng.gif");
+   }
+   
+   .introduce-text >p {
+       line-height: 30px;
+       text-indent: 2em;
+   }
+   /*合作流程*/
+   
+   .flow {}
+   
+   .flow li {
+       float: left;
+       height: 370px;
+       width: 177px;
+       margin: 0 15px;
+   }
+   
+   .flow li .flow-text {
+       height: 68px;
+       padding: 15px 15px 0px 15px;
+       font-size: 12px;
+       color: #878787;
+       border: 1px solid #2c86ed;
+       border-radius: 10px;
+   }
+   
+   .flow li .flow-img {
+       margin-top: 15px;
+       padding: 0 80px;
+       height: 110px;
+       background-image: url("../images/home_arrows_up.gif");
+       -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+       background-clip: padding-box;
+       -webkit-background-origin: content-box;
+       background-origin: content-box;
+       background-repeat: no-repeat;
+   }
+   
+   .flow li.odd {}
+   
+   .flow li.even {
+       margin-top: 210px;
+       margin-bottom: 100px;
+   }
+   
+   .flow li.even .flow-img {
+       background-image: url("../images/home_arrows_down.gif");
+   }
+   
+   .flow li .flow-icon {
+       position: relative;
+       width: 84px;
+       height: 60px;
+       padding: 0px 45px;
+       background-image: url("../images/home_linkup.jpg");
+       -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+       background-clip: padding-box;
+       -webkit-background-origin: content-box;
+       background-origin: content-box;
+       background-repeat: no-repeat;
+       -webkit-background-size: 100% 100%;
+       background-size: 100% 100%;
+   }
+   
+   .flow li:nth-of-type(2) .flow-icon {
+       background-image: url("../images/home_scheme.jpg");
+   }
+   
+   .flow li:nth-of-type(3) .flow-icon {
+       background-image: url("../images/home_interactivedesign.jpg");
+   }
+   
+   .flow li:nth-of-type(4) .flow-icon {
+       background-image: url("../images/home_visualdesign.jpg");
+   }
+   
+   .flow li:nth-of-type(5) .flow-icon {
+       background-image: url("../images/home_develop.jpg");
+   }
+   
+   .flow li:nth-of-type(6) .flow-icon {
+       background-image: url("../images/home_qualityaudit.jpg");
+   }
+   
+   .flow li .flow-title {
+       padding-top: 20px;
+       text-align: center;
+       font-weight: 700;
+       font-size: 28px;
+   }
+   
+   .flow li .flow-arrows {
+       position: absolute;
+       font-size: 40px;
+       color: #2c86ed;
+       right: -40px;
+       top: 7px;
+       font-weight: 700;
+   }

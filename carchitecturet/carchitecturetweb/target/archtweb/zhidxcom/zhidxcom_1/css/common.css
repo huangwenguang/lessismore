@@ -1,0 +1,82 @@
+#project{
+
+}
+#project .project-title{
+    text-align: center;
+    height: 50px;
+    line-height: 1.333333rem;
+    font-size: 25px;
+}
+#project .project-box{
+    height: 100%;
+}
+#project .project-box .project{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1200;
+    background-color: #fff;
+}
+#project .project-box .project img{
+    width: 8.0rem;
+}
+#project .project-box .project p{
+    position: absolute;
+    bottom: 25px;
+    font-size: 0.533333rem;
+    left: 50%;
+    transform:translate(-50%);
+}
+#project .project-box .swiper-project{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1003;
+    background-color: #fff;
+}
+#project .project-box .swiper-project .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+#project .project-box .swiper-project .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+#project .project-box .swiper-project .swiper-wrapper .swiper-slide img{
+    width: 8.0rem;
+}
+#project .project-box .swiper-project .swiper-wrapper .swiper-slide p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2.666667rem;
+    line-height: 2.666667rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.426667rem;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+#mask{       
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    filter: alpha(opacity=60);
+    background-color: #777;     
+    z-index: 1002;
+    left: 0px;     
+    opacity:0.5;
+    -moz-opacity:0.5;     
+}  

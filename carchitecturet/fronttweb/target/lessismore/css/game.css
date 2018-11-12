@@ -1,0 +1,62 @@
+   .img {
+       background-image: url("../images/game_img.png");
+   }
+   
+   .game-dev {
+       padding-bottom: 100px;
+   }
+   
+   .game-dev .title {
+       padding-top: 150px;
+       position: relative;
+       height: 200px;
+   }
+   
+   .game-dev .title h2 {
+       text-align: center;
+       font-weight: 700;
+       font-size: 58px;
+       color: #2C86ED;
+   }
+   
+   .game-dev .title > span {
+       width: 220px;
+       height: 4px;
+       display: block;
+       position: absolute;
+       left: 0;
+       right: 0;
+       bottom: 100px;
+       margin: auto;
+       background-color: #FFB92D;
+   }
+   
+   .game-introduce {
+       position: relative;
+       margin-top: 100px;
+   }
+   
+   .game-introduce .introduce-text {
+       float: right;
+       width: 800px;
+       font-size: 14px;
+       color: #666666;
+       margin-bottom: 100px;
+   }
+   
+   .game-introduce .introduce-img {
+       width: 400px;
+       height: 229px;
+       position: absolute;
+       left: 0;
+       top: -100px;
+       background-image: url("../images/game_ng.gif");
+   }
+   
+   .introduce-text >p {
+       line-height: 30px;
+       text-indent: 2em;
+   }
+   /*合作流程*/
+   
+
